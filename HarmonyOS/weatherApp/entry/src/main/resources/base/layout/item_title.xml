@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Text
+    xmlns:ohos="http://schemas.huawei.com/res/ohos"
+    ohos:id="$+id:city1"
+    ohos:height="match_content"
+    ohos:width="match_content"
+    ohos:text_size="12vp"
+    ohos:padding="6vp"
+    ohos:margin="2vp"
+    ohos:text_color="#a3ffffff"
+    ohos:background_element="#70000000"
+    >
+
+</Text>

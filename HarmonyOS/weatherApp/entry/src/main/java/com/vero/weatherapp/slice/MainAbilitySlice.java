@@ -1,23 +1,66 @@
 package com.vero.weatherapp.slice;
 
 import com.vero.weatherapp.ResourceTable;
+import com.vero.weatherapp.data.CityModel;
+import com.vero.weatherapp.data.ListItemProvider;
+import com.vero.weatherapp.util.HiExecutor;
 import ohos.aafwk.ability.AbilitySlice;
 import ohos.aafwk.content.Intent;
+import ohos.agp.components.ListContainer;
+import ohos.agp.components.RecycleItemProvider;
+import org.devio.hi.json.HiJson;
 
-public class MainAbilitySlice extends AbilitySlice {
+import java.util.ArrayList;
+import java.util.Currency;
+import java.util.List;
+
+public class MainAbilitySlice extends AbilitySlice implements ListItemProvider.OnItemClickListener {
+    private ListContainer listContainer;
+    private ListItemProvider listItemProvider;
+    private ArrayList<CityModel> cityModels=new ArrayList<>();
     @Override
     public void onStart(Intent intent) {
         super.onStart(intent);
         super.setUIContent(ResourceTable.Layout_ability_main);
+        initLayout();
+        initCity();
     }
 
-    @Override
-    public void onActive() {
-        super.onActive();
+    private void initCity() {
+        cityModels.add(new CityModel("深圳","1100"));
+        cityModels.add(new CityModel("北京","1200"));
+        cityModels.add(new CityModel("上海","1300"));
+        cityModels.add(new CityModel("广州","1400"));
+        cityModels.add(new CityModel("兴义","1500"));
+        cityModels.add(new CityModel("成都","1600"));
+        cityModels.add(new CityModel("重庆","1700"));
+        cityModels.add(new CityModel("武汉","1800"));
+        cityModels.add(new CityModel("南京","1900"));
+        listItemProvider.setData(cityModels);
+        //需要这行，不然不生效？
+        listContainer.setItemProvider(listItemProvider);
     }
 
+    private void initLayout() {
+        listContainer= (ListContainer) findComponentById(ResourceTable.Id_list);
+        listItemProvider=new ListItemProvider(this,this);
+        listContainer.setItemProvider(listItemProvider);
+    }
+
+
     @Override
-    public void onForeground(Intent intent) {
-        super.onForeground(intent);
+    public void onItemClick(CityModel model, int position) {
+        HiExecutor.runOnBG(new Runnable() {
+            @Override
+            public void run() {
+                System.out.println("----HiExecutor====子线程==="+Thread.currentThread());
+                HiExecutor.runOnUI(new Runnable() {
+                    @Override
+                    public void run() {
+                        System.out.println("----HiExecutor====主线程"+Thread.currentThread());
+                    }
+                });
+            }
+        });
     }
 }
