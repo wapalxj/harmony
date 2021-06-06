@@ -1,0 +1,46 @@
+{
+  "app": {
+    "bundleName": "com.vero.weatherapp",
+    "vendor": "vero",
+    "version": {
+      "code": 1000000,
+      "name": "1.0.0"
+    }
+  },
+  "deviceConfig": {},
+  "module": {
+    "package": "com.vero.weatherapp",
+    "name": ".MyApplication",
+    "mainAbility": "com.vero.weatherapp.MainAbility",
+    "deviceType": [
+      "wearable"
+    ],
+    "distro": {
+      "deliveryWithInstall": true,
+      "moduleName": "entry",
+      "moduleType": "entry",
+      "installationFree": false
+    },
+    "abilities": [
+      {
+        "skills": [
+          {
+            "entities": [
+              "entity.system.home"
+            ],
+            "actions": [
+              "action.system.home"
+            ]
+          }
+        ],
+        "orientation": "unspecified",
+        "name": "com.vero.weatherapp.MainAbility",
+        "icon": "$media:icon",
+        "description": "$string:mainability_description",
+        "label": "$string:app",
+        "type": "page",
+        "launchType": "standard"
+      }
+    ]
+  }
+}

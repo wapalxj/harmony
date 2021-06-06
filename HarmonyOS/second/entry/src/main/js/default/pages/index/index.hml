@@ -1,0 +1,7 @@
+<div class="container">
+    <text class="title">
+<!--        {{ $t('strings.hello') }} {{ title }}-->
+
+        js---harmony
+    </text>
+</div>

@@ -1,0 +1,41 @@
+<div class="container">
+<!--    <text class="title">-->
+<!--        {{ $t('strings.hello') }} {{ title }}-->
+<!--    </text>-->
+    <text class="result">
+        0
+    </text>
+    <div class="row">
+        <text class="cell_normal">AC</text>
+        <text class="cell_normal">+/-</text>
+        <text class="cell_normal">%</text>
+        <text class="cell_normal cell_special">÷</text>
+    </div>
+
+    <div class="row">
+        <text class="cell_normal">7</text>
+        <text class="cell_normal">8</text>
+        <text class="cell_normal">9</text>
+        <text class="cell_normal cell_special">x</text>
+    </div>
+
+    <div class="row">
+        <text class="cell_normal">4</text>
+        <text class="cell_normal">5</text>
+        <text class="cell_normal">6</text>
+        <text class="cell_normal cell_special">-</text>
+    </div>
+
+    <div class="row">
+        <text class="cell_normal">1</text>
+        <text class="cell_normal">2</text>
+        <text class="cell_normal">3</text>
+        <text class="cell_normal cell_special">+</text>
+    </div>
+
+    <div class="row">
+        <text class="cell_normal cell_special2 ">0</text>
+        <text class="cell_normal">.</text>
+        <text class="cell_normal cell_special ">=</text>
+    </div>
+</div>

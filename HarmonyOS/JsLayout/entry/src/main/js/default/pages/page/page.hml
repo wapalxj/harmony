@@ -1,0 +1,12 @@
+<div class="container">
+<!--    <text class="title" onclick="jumpTo">-->
+<!--        Hello {{ title }}-->
+<!--    </text>-->
+
+    <text onclick="jumpTo">gotoPage2</text>
+    <text >{{data2}}</text>
+</div>
+
+
+
+
