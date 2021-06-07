@@ -12,6 +12,17 @@
     "package": "com.vero.weatherapp",
     "name": ".MyApplication",
     "mainAbility": "com.vero.weatherapp.MainAbility",
+    "reqPermissions": [
+      {
+        "name": "ohos.permission.INTERNET"
+      },
+      {
+        "name": "ohos.permission.GET_NETWORK_INFO"
+      },
+      {
+        "name": "ohos.permission.SET_NETWORK_INFO"
+      }
+    ],
     "deviceType": [
       "wearable"
     ],
